@@ -1,0 +1,44 @@
+#+TITLE: Read and write text files with NodeJS
+#+TAGS: cryptokasten, nodejs, javascript, io, files
+#+PROPERTY: header-args:js :session *shell nodejs-read-and-write-files js* :results silent raw
+#+OPTIONS: ^:nil
+
+[[https://github.com/cryptokasten][file:https://img.shields.io/badge/dynamic/json.svg?url=https://api.github.com/users/cryptokasten&label=Cryptokasten&query=$.public_repos]]
+
+** System environment
+
+- Node 14.8.0
+
+** Import
+
+#+BEGIN_SRC js
+const fs = require('fs');
+#+END_SRC
+
+** File name
+
+#+BEGIN_SRC js
+const fn = 'test.txt'
+#+END_SRC
+
+** Data
+
+#+BEGIN_SRC js
+const data = "Hello, World!"
+#+END_SRC
+
+** Write file
+
+#+BEGIN_SRC js
+fs.writeFileSync(fn, data);
+#+END_SRC
+
+** Read file
+
+#+BEGIN_SRC js
+fs.readFileSync(fn).toString();
+#+END_SRC
+
+** References
+
+1. https://nodejs.org/api/fs.html
